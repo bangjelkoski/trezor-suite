@@ -69,7 +69,7 @@ const config: webpack.Configuration = {
         // imports from @trezor/connect in @trezor/suite package need to be replaced by imports from @trezor/connect-web/src/module
         new webpack.NormalModuleReplacementPlugin(
             /@trezor\/connect$/,
-            '@trezor/connect-web/src/module',
+            '@bangjelkoski/trezor-connect-web/src/module',
         ),
         ...(!isDev ? [new CssMinimizerPlugin()] : []),
     ],

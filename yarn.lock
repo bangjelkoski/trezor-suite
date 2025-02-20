@@ -1784,6 +1784,38 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@bangjelkoski/trezor-connect-web@workspace:*, @bangjelkoski/trezor-connect-web@workspace:^, @bangjelkoski/trezor-connect-web@workspace:packages/connect-web":
+  version: 0.0.0-use.local
+  resolution: "@bangjelkoski/trezor-connect-web@workspace:packages/connect-web"
+  dependencies:
+    "@babel/preset-typescript": "npm:^7.24.7"
+    "@playwright/browser-chromium": "npm:^1.49.1"
+    "@playwright/browser-firefox": "npm:^1.49.1"
+    "@playwright/browser-webkit": "npm:^1.49.1"
+    "@playwright/test": "npm:^1.49.1"
+    "@trezor/connect": "workspace:*"
+    "@trezor/connect-common": "workspace:*"
+    "@trezor/eslint": "workspace:*"
+    "@trezor/utils": "workspace:*"
+    "@types/chrome": "npm:^0.0.299"
+    "@types/w3c-web-usb": "npm:^1.0.10"
+    babel-loader: "npm:^9.1.3"
+    html-webpack-plugin: "npm:^5.6.0"
+    rimraf: "npm:^6.0.1"
+    selfsigned: "npm:^2.4.1"
+    terser-webpack-plugin: "npm:^5.3.11"
+    tsx: "npm:^4.16.3"
+    webpack: "npm:^5.97.1"
+    webpack-cli: "npm:^5.1.4"
+    webpack-merge: "npm:^6.0.1"
+    webpack-plugin-serve: "npm:^1.6.0"
+    worker-loader: "npm:^3.0.8"
+    xvfb-maybe: "npm:^0.2.1"
+  peerDependencies:
+    tslib: ^2.6.2
+  languageName: unknown
+  linkType: soft
+
 "@bcoe/v8-coverage@npm:^0.2.3":
   version: 0.2.3
   resolution: "@bcoe/v8-coverage@npm:0.2.3"
@@ -11737,6 +11769,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@trezor/connect-explorer@workspace:packages/connect-explorer"
   dependencies:
+    "@bangjelkoski/trezor-connect-web": "workspace:^"
     "@codemirror/state": "npm:^6.4.1"
     "@hbsnow/rehype-sectionize": "npm:^1.0.7"
     "@sinclair/typebox": "npm:^0.33.12"
@@ -11744,7 +11777,6 @@ __metadata:
     "@trezor/connect": "workspace:^"
     "@trezor/connect-explorer-theme": "workspace:^"
     "@trezor/connect-mobile": "workspace:^"
-    "@trezor/connect-web": "workspace:^"
     "@trezor/connect-webextension": "workspace:^"
     "@trezor/eslint": "workspace:*"
     "@trezor/protobuf": "workspace:^"
@@ -11920,46 +11952,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@trezor/connect-web@workspace:*, @trezor/connect-web@workspace:^, @trezor/connect-web@workspace:packages/connect-web":
-  version: 0.0.0-use.local
-  resolution: "@trezor/connect-web@workspace:packages/connect-web"
-  dependencies:
-    "@babel/preset-typescript": "npm:^7.24.7"
-    "@playwright/browser-chromium": "npm:^1.49.1"
-    "@playwright/browser-firefox": "npm:^1.49.1"
-    "@playwright/browser-webkit": "npm:^1.49.1"
-    "@playwright/test": "npm:^1.49.1"
-    "@trezor/connect": "workspace:*"
-    "@trezor/connect-common": "workspace:*"
-    "@trezor/eslint": "workspace:*"
-    "@trezor/utils": "workspace:*"
-    "@types/chrome": "npm:^0.0.299"
-    "@types/w3c-web-usb": "npm:^1.0.10"
-    babel-loader: "npm:^9.1.3"
-    html-webpack-plugin: "npm:^5.6.0"
-    rimraf: "npm:^6.0.1"
-    selfsigned: "npm:^2.4.1"
-    terser-webpack-plugin: "npm:^5.3.11"
-    tsx: "npm:^4.16.3"
-    webpack: "npm:^5.97.1"
-    webpack-cli: "npm:^5.1.4"
-    webpack-merge: "npm:^6.0.1"
-    webpack-plugin-serve: "npm:^1.6.0"
-    worker-loader: "npm:^3.0.8"
-    xvfb-maybe: "npm:^0.2.1"
-  peerDependencies:
-    tslib: ^2.6.2
-  languageName: unknown
-  linkType: soft
-
 "@trezor/connect-webextension@workspace:^, @trezor/connect-webextension@workspace:packages/connect-webextension":
   version: 0.0.0-use.local
   resolution: "@trezor/connect-webextension@workspace:packages/connect-webextension"
   dependencies:
     "@babel/preset-typescript": "npm:^7.24.7"
+    "@bangjelkoski/trezor-connect-web": "workspace:*"
     "@trezor/connect": "workspace:*"
     "@trezor/connect-common": "workspace:*"
-    "@trezor/connect-web": "workspace:*"
     "@trezor/eslint": "workspace:*"
     "@trezor/node-utils": "workspace:*"
     "@trezor/trezor-user-env-link": "workspace:*"
@@ -12552,6 +12552,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@trezor/suite@workspace:packages/suite"
   dependencies:
+    "@bangjelkoski/trezor-connect-web": "workspace:*"
     "@crowdin/cli": "npm:^4.0.0"
     "@everstake/wallet-sdk": "npm:^1.0.10"
     "@floating-ui/react": "npm:^0.26.9"
@@ -12603,7 +12604,6 @@ __metadata:
     "@trezor/coinjoin": "workspace:*"
     "@trezor/components": "workspace:*"
     "@trezor/connect": "workspace:*"
-    "@trezor/connect-web": "workspace:*"
     "@trezor/crypto-utils": "workspace:*"
     "@trezor/device-utils": "workspace:*"
     "@trezor/dom-utils": "workspace:*"
@@ -18926,8 +18926,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "connect-example-electron-renderer-with-assets@workspace:packages/connect-examples/electron-renderer-with-assets"
   dependencies:
+    "@bangjelkoski/trezor-connect-web": "workspace:*"
     "@trezor/connect": "workspace:*"
-    "@trezor/connect-web": "workspace:*"
     "@trezor/eslint": "workspace:*"
     babel-loader: "npm:^9.1.3"
     concurrently: "npm:^8.2.2"

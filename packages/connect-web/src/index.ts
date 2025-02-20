@@ -99,4 +99,5 @@ const TrezorConnect = factory<ConnectSettingsWeb, ConnectWebExtraMethods>(
 );
 
 export default TrezorConnect;
+export { TrezorConnect };
 export * from '@trezor/connect/src/exports';

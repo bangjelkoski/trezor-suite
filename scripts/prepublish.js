@@ -17,12 +17,17 @@ console.log('prepublish script running for package: ' + process.env.npm_package_
 //  2. find and replace all the problematic occurrences before actual release.
 //     not very good solution and yarn advices against doing it https://yarnpkg.com/advanced/lifecycle-scripts
 
+const pckName =
+    process.env.npm_package_name === '@bangjelkoski/trezor-connect-web'
+        ? '@trezor/connect-web'
+        : process.env.npm_package_name;
+
 execSync(
     `./replace-imports.sh ${path.join(
         __dirname,
         '..',
         'packages',
-        process.env.npm_package_name.split('/')[1],
+        pckName.split('/')[1],
     )}/lib`,
     {
         encoding: 'utf-8',
@@ -30,7 +35,7 @@ execSync(
     },
 );
 
-if (!process.env.CI) {
-    console.log('DO NOT TRY TO PUBLISH FROM YOUR LOCAL MACHINE! Publish only from CI.');
-    process.exit(1);
-}
+// if (!process.env.CI) {
+//     console.log('DO NOT TRY TO PUBLISH FROM YOUR LOCAL MACHINE! Publish only from CI.');
+//     process.exit(1);
+// }
